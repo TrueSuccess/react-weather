@@ -17,8 +17,8 @@ const Background = ({city}) => {
                 const randomPhoto = result.data.results[Math.floor(Math.random() * result.data.results.length)];
                 setBackgroundUrl(randomPhoto.urls.regular);
                 setPhotographer(randomPhoto.user.name);
-                setPhotographerUrl(randomPhoto.user.links.html.concat('?utm_source=trina_react_weather&utm_medium=referral'));
-                setPhotoUrl(randomPhoto.links.html.concat('?utm_source=trina_react_weather&utm_medium=referral'));
+                setPhotographerUrl(randomPhoto.user.links.html.concat('?utm_source=react_weather&utm_medium=referral'));
+                setPhotoUrl(randomPhoto.links.html.concat('?utm_source=react_weather&utm_medium=referral'));
                 //get photo location
                 const location = await axios.get(`https://api.unsplash.com/photos/${randomPhoto.id}?client_id=${process.env.REACT_APP_UNSPLASH_KEY}`)
                 setPhotoLocation(location.data.location.title)
@@ -71,7 +71,7 @@ const Background = ({city}) => {
     </div>
     <div className='unsplash-description'>
         <p>{photoLocation}</p>
-        <p><a href={photoUrl ? photoUrl : 'https://unsplash.com/photos/u4uGoUBxmCE?utm_source=trina_react_weather&utm_medium=referral'} target="_blank" rel='noreferrer'>Photo</a> / <a href={photographerUrl ? photographerUrl : 'https://unsplash.com/@wildlittlethingsphoto?utm_source=trina_react_weather&utm_medium=referral'} target="_blank" rel='noreferrer'>{photographer ? photographer : 'Helena Lopes'}</a> / <a href='https://unsplash.com/?utm_source=trina_react_weather&utm_medium=referral' target="_blank" rel='noreferrer'>Unsplash</a></p>
+        <p><a href={photoUrl ? photoUrl : 'https://unsplash.com/photos/u4uGoUBxmCE?utm_source=react_weather&utm_medium=referral'} target="_blank" rel='noreferrer'>Photo</a> / <a href={photographerUrl ? photographerUrl : 'https://unsplash.com/@wildlittlethingsphoto?utm_source=react_weather&utm_medium=referral'} target="_blank" rel='noreferrer'>{photographer ? photographer : 'Helena Lopes'}</a> / <a href='https://unsplash.com/?utm_source=react_weather&utm_medium=referral' target="_blank" rel='noreferrer'>Unsplash</a></p>
     </div>
     </> );
 }

@@ -1,10 +1,3 @@
-# Trina's React Weather App
-[![Netlify Status](https://api.netlify.com/api/v1/badges/93c5450c-e466-4130-8068-adfd7764e196/deploy-status)](https://app.netlify.com/sites/trina-react-weather/deploys)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat&logo=appveyor)](https://opensource.org/licenses/MIT)
-
-Weather app showing a 5-day forecast for whatever location the user chooses to search for.  
-This React weather app is deployed here: https://trina-react-weather.netlify.app/
-
 ## Project Description
 This is a solo front end project to make a weather app using React.  
 
@@ -41,7 +34,7 @@ This app consumes several APIs:
 * Planned out how state would be managed in React components- to avoid complexity I did not use Redux
 
 ### Delivery
-* Deployed client on Netlify [here](https://trina-react-weather.netlify.app/)
+* Deployed client on Vercel
  
 ## Wins & Challenges
 
